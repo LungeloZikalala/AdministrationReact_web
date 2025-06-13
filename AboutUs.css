@@ -1,0 +1,42 @@
+/* Container styling for the About Us section */
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: revealAnimation 1.5s ease-out forwards;
+  text-align: center;
+  color: #333;
+}
+
+/* Title styling */
+.about-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #002766;
+}
+
+/* Description styling */
+.about-description {
+  font-size: 1.1em;
+  line-height: 1.6;
+  max-width: 800px;
+  color: #555;
+}
+
+/* Keyframes for the reveal animation */
+@keyframes revealAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
