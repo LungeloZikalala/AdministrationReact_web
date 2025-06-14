@@ -1,0 +1,335 @@
+/* Main container */
+.student-data-management-container {
+  display: flex;
+  height: 100vh;
+  background-color: #111111;
+  color: #fff;
+  flex-direction: row;
+}
+
+/* Sidebar with logo, about us, and logout */
+.sidebar {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #333;
+  padding: 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-image {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
+}
+
+.sidebar-menu {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sidebar-menu button {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px 0;
+  width: 80%;
+  text-align: center;
+}
+
+.about-button {
+  margin-top: 50px;
+}
+
+.logout-button {
+  margin-top: auto;
+  background-color: #ff4d4f;
+  color: #fff;
+}
+
+.logout-button:hover {
+  background-color: #ff7875;
+}
+
+/* Main content area */
+.main-content {
+  width: 80%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.header h2 {
+  font-size: 24px;
+  padding: 10px;
+  background-color: #002766;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.button-panel {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.button-panel button {
+  background-color: #002766;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+.button-panel button:hover {
+  background-color: #0044cc;
+}
+
+.content-area {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+  max-width: 800px;
+  overflow-y: auto;
+}
+
+/* Student List container using Flexbox */
+.student-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Each student card (segment) */
+.student-card {
+  background-color: #222;
+  border: 1px solid #555;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  width: 100%;
+}
+
+/* Image in the student card */
+.student-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Student details */
+.student-details {
+  flex-grow: 1;
+}
+
+.student-details p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: whitesmoke;
+}
+
+.student-details strong {
+  font-size: 16px;
+  color: #ffcc00;
+}
+
+/* Error message styling */
+.error-message {
+  color: whitesmoke;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* Delete button styling */
+.delete-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.delete-button:hover {
+  background-color: #ff7875;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal Content */
+.modal-content-image {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  text-align: center;
+}
+
+/* Enlarged image in modal */
+.modal-image {
+  width: 100%;
+  max-width: 200px; /* Adjust width for a more uniform size */
+  height: auto;
+  border-radius: 8px;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+/* Modal details container */
+.modal-details {
+  color: white;
+  text-align: center;
+}
+
+.modal-details p {
+  margin: 5px 0;
+  font-size: 18px;
+  color: white;
+}
+
+/* Close Button */
+.close-button {
+  background-color: #ff4d4f;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.close-button:hover {
+  background-color: #ff7875;
+}
+
+/* Edit form in modal to display fields horizontally */
+.edit-form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Align items in a row */
+  justify-content: start; /* Space items evenly */
+  align-items: center; /* Center items vertically */
+  gap: 15px; /* Add space between label-input pairs */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-top: 20px; /* Space from the image above */
+}
+
+/* Individual labels */
+.edit-form label {
+  display: flex; /* Ensure label and input are flex items */
+  align-items: center; /* Center items vertically */
+  color: whitesmoke;
+}
+
+/* Style input fields */
+.edit-form input {
+  padding: 8px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Border for input fields */
+  border-radius: 4px; /* Rounded corners */
+  background-color: black; /* White background for inputs */
+  color: whitesmoke; /* Black text */
+  width: 150px; /* Set width for uniformity */
+}
+
+/* Save Changes button */
+.edit-form button {
+  background-color: #002766; /* Matching theme color */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding for button */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  margin-top: 10px; /* Space from inputs */
+}
+
+.edit-form button:hover {
+  background-color: #0044cc; /* Button hover effect */
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Space between rows */
+}
+
+.form-row label {
+  margin-right: 10px; /* Space between label and input */
+  flex: 1; /* Allow label to take some space */
+}
+
+.form-row input {
+  flex: 2; /* Input takes more space compared to label */
+  padding: 5px; /* Padding for better aesthetics */
+}
